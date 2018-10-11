@@ -3,7 +3,7 @@ python:
   - 3.6
 
 install:
-  - pip pipenv
+  - pip install pipenv
   - pipnv install --dev
 
 before_script:
