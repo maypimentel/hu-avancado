@@ -5,6 +5,7 @@ python:
 install:
   - pip install pipenv
   - pipenv install --dev
+  - pipenv install --skip-lock codecov
 
 before_script:
   - cp contrib/env-sample .env
@@ -12,3 +13,6 @@ before_script:
 script:
   - pipenv run pytest .
   - pipenv run flake8 .
+
+after_success:
+  - pipenv run codecov
