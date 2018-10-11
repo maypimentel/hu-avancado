@@ -1,11 +1,16 @@
-from flask import Blueprint, Flask
+from flask import Blueprint, Flask, url_for
 
 core_bp = Blueprint('core', __name__)
 
 
 @core_bp.route('/')
 def hello_world():
-    return "Hello world"
+    return 'Hello World'
+
+
+@core_bp.route('/url')
+def url():
+    return url_for('core.url')
 
 
 def init_app(app: Flask, url_prefix='/'):
