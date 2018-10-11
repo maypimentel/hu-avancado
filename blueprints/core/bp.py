@@ -1,4 +1,4 @@
-from flask import Blueprint, Flask, url_for
+from flask import Blueprint, Flask
 
 core_bp = Blueprint('core', __name__)
 
