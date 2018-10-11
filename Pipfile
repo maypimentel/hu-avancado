@@ -6,8 +6,8 @@ name = "pypi"
 [packages]
 python-decouple = "*"
 
-
 [dev-packages]
+pytest = "*"
 
 [requires]
 python_version = "3.7"
